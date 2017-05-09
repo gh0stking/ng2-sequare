@@ -1,4 +1,4 @@
-# 使用案例：
+# 使用示例：
 ```
 1.component中引入SequareComponent组件
 import {SequareComponent} from '../components/sequare';
