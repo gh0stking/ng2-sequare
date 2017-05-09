@@ -1,5 +1,8 @@
 # 使用案例：
 ```
+1.component中引入SequareComponent组件
+import {SequareComponent} from '../components/sequare';
+2.html页面中使用sequare
 <sequare 
     [seq-rows]="5" 
     [seq-cols]="6" 
