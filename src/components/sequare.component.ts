@@ -28,7 +28,12 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
  *      --demo:[seq-color]="'#F06060'"
  *      --note:16进制颜色值
  * 
- * @seqBoxSelectedEvent
+ * @seqBoxSelectedEvent 
+ *      --description:选中格子事件
+ *      --demo:(seqBoxSelectedEvent)="boxSelected($event)"
+ *      --note:$event中包含了点击格子事件返回的参数，
+ *              如 : boxSelected(args):void{ console.log(args); }
+ * 
  */
 @Component({
     selector: 'sequare',

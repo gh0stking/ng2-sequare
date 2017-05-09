@@ -1,28 +1,47 @@
-# Ng2Sequare
+# 使用案例：
+```
+<sequare 
+    [seq-rows]="5" 
+    [seq-cols]="6" 
+    [seq-data]="[{ID:1,X:1,Y:1},{ID:2,X:2,Y:3}]" 
+    [seq-box-size]="70" 
+    [seq-box-color]="'#F06060'" 
+    (seqBoxSelectedEvent)="boxSelected($event)">
+</sequare>
+```
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+# 参数说明：
+```
+seq-rows
+    --description:行数
+    --demo:[seq-rows]="5"
+    --note:大于0的整数
 
-## Development server
+seq-cols
+    --description:列数
+    --demo:[seq-cols]="5"
+    --note:大于0的整数
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+seq-data
+    --description:包含数据的格子
+    --demo:[seq-data]="[{ID:1,X:1,Y:2},{ID:2,X:3,Y:3}]"
+    --note:每个数据中必须包含id,x,y属性，其中x,y属性用于指定此单元格的位置(id可以是数字或字符串，x和y是整数，从0开始计算)
 
-## Code scaffolding
+seq-box-size
+    --description:格子大小
+    --demo:[seq-size]="50"
+    --note:大于0的整数
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+seq-box-color
+    --description:格子颜色
+    --demo:[seq-color]="'#F06060'"
+    --note:16进制颜色值
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+seqBoxSelectedEvent 选中格子事件
+    --description:选中格子事件
+    --demo:(seqBoxSelectedEvent)="boxSelected($event)"
+    --note:$event中包含了点击格子事件返回的参数，如：
+            boxSelected(args):void{ 
+                console.log(args); 
+            }
+```
