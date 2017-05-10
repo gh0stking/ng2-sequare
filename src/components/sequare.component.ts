@@ -51,6 +51,7 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
                 (click)='changeCurrentBox(box)'>
             </span>
         </div>
+        <div class="clear"></div>
     `,
     styles: [`
         .seq-box{
@@ -68,6 +69,9 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
         }
         .seq-box-hasdata{
             background-color:#6191C6!important;
+        }
+        .clear{
+            clear:both;
         }
     `]
 })
